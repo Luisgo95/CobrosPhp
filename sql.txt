@@ -1,0 +1,31 @@
+create database dbcobros;
+use dbcobros;
+create user 'UserCobros' identified by 'UserCobros123';
+
+GRANT USAGE ON *.* TO 'UserCobros'@localhost IDENTIFIED BY 'UserCobros123';
+
+GRANT ALL privileges ON `dbcobros`.* TO 'UserCobros'@localhost;
+
+FLUSH PRIVILEGES;
+show grants for 'UserCobros'@localhost;
+select version();
+CREATE TABLE Afiliados (idAfiliado int(10) NOT NULL AUTO_INCREMENT, nombre varchar(50), apellido varchar(50), telefono varchar(10), dpi varchar(20), PRIMARY KEY (idAfiliado));
+CREATE TABLE Egresos (idEgresos int(10) NOT NULL AUTO_INCREMENT, descripcion varchar(100), cantidad numeric(19, 0), fecha timestamp NULL, PRIMARY KEY (idEgresos));
+CREATE TABLE Mes (id int(10) NOT NULL AUTO_INCREMENT, nombre varchar(50), PRIMARY KEY (id));
+CREATE TABLE recibos (idRecibo int(10) NOT NULL AUTO_INCREMENT, descripcion varchar(100), cantidad numeric(19, 0), idMes int(10) NOT NULL, fecha timestamp NULL, idAfiliado int(10) NOT NULL, PRIMARY KEY (idRecibo));
+CREATE TABLE Usuarios (idUsuario int(10) NOT NULL AUTO_INCREMENT, usuario varchar(25), password varchar(255), PRIMARY KEY (idUsuario));
+ALTER TABLE recibos ADD CONSTRAINT FKrecibos510977 FOREIGN KEY (idMes) REFERENCES Mes (id);
+ALTER TABLE recibos ADD CONSTRAINT FKrecibos4933 FOREIGN KEY (idAfiliado) REFERENCES Afiliados (idAfiliado);
+select * from mes;
+insert into mes (nombre) values('Enero');
+
+insert into usuarios(usuario,password)  value('Admin','123');
+select * from usuarios;
+select * from mes;
+select * from Afiliados;
+insert into afiliados(nombre,apellido,telefono,dpi)  value('Luis','123');
+insert into recibos(descripcion,cantidad,idMes,fecha,idAfiliado)  value('Descripcion',100,1,'2020-10-10',1);
+select * from recibos;
+insert into Egresos(descripcion,cantidad,idMes,fecha,idAfiliado)  value('Descripcion',100,1,'2020-10-10',1);
+select * from recibos r inner join afiliados afi on afi.idAfiliado = r.idAfiliado;
+where afi.id 

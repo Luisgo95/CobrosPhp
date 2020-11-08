@@ -1,0 +1,67 @@
+header {
+  background: #3440ca;
+  color: #fff;
+}
+a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #3440ca !important;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.nav > li > a:hover {
+  color: #000000 !important;
+  background: #f4f4f5 !important;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.a:hover {
+  background: red;
+}
+.main {
+  background: #e6e6e6;
+}
+.fondo {
+  background: transparent linear-gradient(90deg, #0571cd 0%, #003c71 100%) 0% 0%
+    no-repeat padding-box;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  height: 100vh;
+
+  background-image: url("https://www.fundacionmaude.com/wp-content/uploads/2017/08/agua_potable.jpg") !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.color1 {
+  background: #34495e;
+  color: #fff;
+}
+aside {
+  background: #c0392b;
+  color: #fff;
+}
+footer {
+  background: #16a085;
+  color: #fff;
+}
