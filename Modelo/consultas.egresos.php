@@ -6,7 +6,7 @@ class Egresos{
   try {
       $modelo = new Conexion();
       $conexion = $modelo->get_conexion();
-      $sql = "insert into egresos(descripcion,cantidad,fecha) 
+      $sql = "insert into egresos(descripcion,cantidad,fecha)
       value(:descripcion,:cantidad,:fecha)";
       $statement= $conexion->prepare($sql);
       $statement->bindParam(':descripcion', $descripcion);
@@ -24,40 +24,48 @@ class Egresos{
       echo $e;
     }
     }
+    public function editarEgreso($IdEgreso,$descripcion,$cantidad,$fecha){
 
 
-    public function editarEgresos($IdEgreso,$descripcion,$cantidad,$fecha){
-  try {
+    try {
+        $Recibo = new Conexion();
+        $conexion = $Recibo->get_conexion();
+
+        $sql = "
+        update egresos set descripcion=:descripcion,
+        cantidad=:cantidad,
+        fecha=:fecha
+        where idEgresos=:id;
+        ";
+        $statement = $conexion->prepare($sql);
+        $statement->bindParam(':id', $IdEgreso);
+        $statement->bindParam(':descripcion', $descripcion);
+        $statement->bindParam(':cantidad', $cantidad);
+
+        $statement->bindParam(':fecha',$fecha );
+
+
+        if (!$statement) {
+                return "Error al crear el registro";
+            }else {
+              $statement->execute();
+                return  "Registro Ingresado";
+              echo "Ingresado";
+            }
+          } catch (\Exception $e) {
+            echo $e;
+          }
+          }
+
+
+
+      public function Borrar($Id){
+
     $modelo = new Conexion();
     $conexion = $modelo->get_conexion();
-    $sql = "update egresos set descripcion=:descripcion,
-    cantidad=:cantidad,
-    fecha=:fecha
-    where idEgresos=:idEgreso;";
-    $statement = $conexion->prepare($sql);
-    $statement->bindParam(':descripcion', $descripcion);
-    $statement->bindParam(':cantidad', $cantidad);
-    $statement->bindParam(':fecha', $fecha);
-    $statement->bindParam(':idEgreso', $idEgreso);
-    if (!$statement) {
-            return "Error al crear el registro";
-        }else {
-          $statement->execute();
-            return  "Registro Ingresado";
-            echo "Ingresado";
-        }
-      } catch (\Exception $e) {
-        echo $e;
-      }
-      }
-
-      public function BorrarEgreso($IdMar){
-
-    $modelo = new Conexion();
-    $conexion = $modelo->get_conexion();
-    $sql = "  delete from Egresos where idEgreso = :IdMar";
+    $sql = "delete from Egresos where idEgresos = :IdMar";
     $statement= $conexion->prepare($sql);
-    $statement->bindParam(':IdMar', $IdMar);
+    $statement->bindParam(':IdMar', $Id);
     if (!$statement) {
       return "Error al crear el registro";
     }else {

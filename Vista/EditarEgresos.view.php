@@ -18,12 +18,11 @@
  
         <div class="col-xs-12 col-sm8 col-md-5">
               <br>
-              <input type="hidden" name="idEgresos"class="form-control" placeholder="Afiliado" aria-describedby="basic-addon1"
-                  value="<?php
-                  if (isset($_GET['a'])) {
-                    echo  $_GET['a'];
-                   }?>"
-                  required>
+              <div class="input-group">
+                <span class="input-group-addon" id="txtCodigo">Codigo</span>
+                <input type="number" name="codigo"class="form-control" placeholder="Nombre"
+                aria-describedby="basic-addon1"required value="<?php    echo $_GET['a']; ?>" readonly="true">
+        </div>   <br>
 
             <div class="input-group">
                   <span class="input-group-addon" id="txtMarca">Descripcion</span>
@@ -33,6 +32,11 @@
 
           </div>
           <br>
+
+          <br>
+          </div>
+          <div class="col-xs-12 col-sm8 col-md-5">
+          <br>
           <div class="input-group">
                   <span class="input-group-addon" id="txtMarca">Cantidad</span>
                   <input type="number" name="cantidad"class="form-control" placeholder="Cantidad" aria-describedby="basic-addon1"required
@@ -41,9 +45,6 @@
                   >
 
           </div>
-          <br>
-          </div>
-          <div class="col-xs-12 col-sm8 col-md-5">
           <br>
           <div class="input-group">
                   <span class="input-group-addon" id="txtMarca">Fecha</span>
