@@ -85,7 +85,7 @@
               <th>Cantidad</th>
               <th>Fecha</th>
               <th>Mes</th>
-              <th>Acciones</th>
+              <!-- <th>Acciones</th> -->
           </tr>
             </thead>
             <tbody>
@@ -99,7 +99,7 @@
               <th>Cantidad</th>
               <th>Fecha</th>
               <th>Mes</th>
-              <th>Acciones</th>
+              <!-- <th>Acciones</th> -->
             </tr>
             </tfoot>
         </table>
@@ -115,7 +115,7 @@
               <th>cantidad</th>
               <th>fecha</th>
       
-              <th>Acciones</th>
+              <!-- <th>Acciones</th> -->
 
           </tr>
             </thead>
@@ -128,7 +128,7 @@
               <th>cantidad</th>
               <th>fecha</th>
       
-              <th>Acciones</th>
+              <!-- <th>Acciones</th> -->
             </tr>
             </tfoot>
         </table>

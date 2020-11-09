@@ -19,7 +19,7 @@ session_start();
 	.'&d='.$row['dpi']
 .'\"data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>';
 $recibo = '<a   href=\"../Vista/recibos.view.php?idAfiliado='.$row['idAfiliado'].'&b='.$row['nombre']." ".$row['apellido']
-.'\"data-toggle=\"tooltip\" data-placement=\"top\" title=\"Ver\" class=\"btn btn-success\"><i class=\"fa fa-university\" aria-hidden=\"true\"></i></a>';
+.'\"data-toggle=\"tooltip\" data-placement=\"top\" title=\"Recibo\" class=\"btn btn-success\"><i class=\"fa fa-university\" aria-hidden=\"true\"></i></a>';
 	$eliminar = '<a href=\"../controlador/Afiliados/controlBorrar.Afiliados.php?id='.$row['idAfiliado'].'\" onclick=\"return confirm(\'¿Seguro que desea eliminiar este usuario?\')\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" class=\"btn btn-danger\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>';
   //  $trans = '<a href=\"transferencia.view.php?a='.$row['imei'].'&b='.$row['Nombre'].'&c='.$row['imei'].'&d='.$row['imei'].'&e='.$row['imei'].'\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>';
 

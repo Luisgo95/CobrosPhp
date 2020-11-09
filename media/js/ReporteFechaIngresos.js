@@ -17,7 +17,7 @@ $(document).ready(function () {
       { data: "cantidad" },
       { data: "fecha" },
       { data: "Mes" },
-      { data: "Acciones" },
+      // { data: "Acciones" },
     ],
     oLanguage: {
       sProcessing: "Procesando...",

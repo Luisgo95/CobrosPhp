@@ -14,7 +14,7 @@ $(document).ready(function () {
       { data: "Descripcion" },
       { data: "cantidad" },
       { data: "fecha" },
-      { data: "Acciones" },
+      // { data: "Acciones" },
     ],
     oLanguage: {
       sProcessing: "Procesando...",

@@ -70,7 +70,7 @@ try {
 
     $Recibo = new Conexion();
     $conexion = $Recibo->get_conexion();
-    $sql = " delete  from Recibo where idRecibo = :IdMod";
+    $sql = " delete  from recibos where idRecibo = :IdMod";
     $statement= $conexion->prepare($sql);
     $statement->bindParam(':IdMod', $IdMo);
     if (!$statement) {

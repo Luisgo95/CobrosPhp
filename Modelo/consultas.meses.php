@@ -50,7 +50,7 @@ class Mes{
 
     $modelo = new Conexion();
     $conexion = $modelo->get_conexion();
-    $sql = "  delete from Mesess where idMeses = :IdMar";
+    $sql = "delete from Mes where id = :IdMar";
     $statement= $conexion->prepare($sql);
     $statement->bindParam(':IdMar', $IdMar);
     if (!$statement) {

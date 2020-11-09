@@ -13,7 +13,7 @@ $(document).ready(function () {
       { data: "id" },
       { data: "Nombre" },
       { data: "Estado" },
-      { data: "Acciones" },
+      // { data: "Acciones" },
     ],
     oLanguage: {
       sProcessing: "Procesando...",
